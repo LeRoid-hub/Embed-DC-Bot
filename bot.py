@@ -18,7 +18,7 @@ async def send_message(message: Message, user_message: str) -> None:
     if is_private := user_message.startswith("private"):
         user_message = user_message[7:]
 
-    if is_twitter := user_message.startswith("https://x.com"):
+    if is_twitter := (user_message.startswith("https://x.com") or user_message.startswith("https://twitter.com")):
         print("Twitter link")
 
     try:

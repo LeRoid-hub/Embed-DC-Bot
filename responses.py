@@ -22,3 +22,5 @@ async def get_response(user_input: str) -> str:
         return f'You rolled: {randint(1, 6)}'
     elif lowered.startswith('https://x.com'):
         return await tweetCapture(lowered, 9222)
+    elif lowered.startswith('https://twitter.com'):
+        return await tweetCapture(lowered, 9223)

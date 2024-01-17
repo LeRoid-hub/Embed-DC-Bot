@@ -5,4 +5,3 @@ async def taskCapture(url, port):
     tweet.add_chrome_argument(f"--remote-debugging-port={port}")
     filename = await tweet.screenshot(url, overwrite=True)
     return filename
-
